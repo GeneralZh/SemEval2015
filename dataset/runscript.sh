@@ -29,4 +29,5 @@ echo 'Mean'
 # echo $((0+${res1#0}+${res2#0}))
 # echo "($res1 + $res2 + $res3 + $res4 + $res5)" | bc
 calc=$(echo "$res1 + $res2 + $res3 + $res4 + $res5"|bc)
+echo $calc
 bc <<< "scale=5;$calc/5.0"
