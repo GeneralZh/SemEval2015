@@ -26,4 +26,7 @@ res5=$(echo $student | grep -o '0\.[0-9]\+')
 echo $res5
 
 echo 'Mean'
-echo $((0+${res1#0}+${res2#0}))
+# echo $((0+${res1#0}+${res2#0}))
+# echo "($res1 + $res2 + $res3 + $res4 + $res5)" | bc
+calc=$(echo "$res1 + $res2 + $res3 + $res4 + $res5"|bc)
+bc <<< "scale=5;$calc/5.0"
